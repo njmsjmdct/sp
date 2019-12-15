@@ -1,0 +1,547 @@
+
+
+@charset "utf-8";
+@font-face { font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+#wrap {
+    width: 100%;
+}
+
+#header-wrap {
+    width: 100%;
+    height: 80px;
+/*
+    min-width: 1400px;
+    max-width: 1600px;
+*/
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 12px 12px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header-logo-wrap {
+    flex: 3;
+    height: 80px;
+}
+
+.header-logo-wrap .logo {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-wrap .logo a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    background-image: url(../images/img_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+
+.header-nav {
+    flex: 7;
+}
+
+.header-nav .nav {
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-nav .nav li {
+    width: 200px;
+}
+
+.header-nav .nav li a {
+    color: orange;
+    font-size: 1.2rem;
+    font-family: 'Binggrae-Bold';
+}
+
+
+/* header 끝 */
+
+.section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#section01 {
+    width: 100%;
+}
+
+#video-wrap {
+    width: 100%;
+}
+
+#video {
+    width: 100%;
+}
+
+
+/* section01 끝*/
+
+
+
+
+
+#section02 {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    position: relative;
+}
+
+#section02 .section02-wrap {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+
+#section02 .section02-wrap .text-info-wrap {
+    flex: 6;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all cubic-bezier(0, 0.3, 0.6, 1);
+}
+
+#section02 .section02-wrap .img-info-wrap {
+    flex: 4;
+    background-color: azure;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#section02 .section02-wrap .text-info-wrap .text-info {
+    width: 90%;
+    height: calc(100%-200px);
+}
+
+#section02 .section02-wrap .text-info-wrap .text-info .text-info-content {
+    width: 600px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.5s all cubic-bezier(0, 0.3, 0.6, 1);
+}
+
+#section02 .section02-wrap .text-info-wrap .text-info .text-info-content.active {
+    top: 50%;
+    opacity: 1;
+}
+
+#section02 .section02-wrap .text-info-wrap .text-info .title {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Binggrae-Bold';
+    line-height: 1.5;
+    padding-bottom: 5%;
+    border-bottom: 3px solid #fff;
+}
+
+#section02 .section02-wrap .text-info-wrap .text-info .info {
+    width: 70%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #eee;
+    padding-top: 5%;
+}
+
+
+#section02 .section02-wrap .img-info-wrap .img-info {
+    width: 100%;
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s all cubic-bezier(0, 0.3, 0.6, 1);
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li.active {
+    opacity: 1;
+    transform: translateX(0px);
+    
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li > div {
+    width: 600px;
+    height: 500px;
+/*    position: absolute;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    left: -50px;
+    
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li .img01 {
+    background-image: url(../images/img01.jpg);
+    z-index: 3;
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li .img02 {
+    background-image: url(../images/garden_img.png);
+    z-index: 2;
+}
+
+#section02 .section02-wrap .img-info-wrap .img-info li .img03 {
+    background-image: url(../images/festival-img.jpg);
+    z-index: 1;
+}
+
+
+
+.btn {
+    position: relative;
+    left: 250px;
+    bottom: 200px;
+    transform: translateY(-50%);
+}
+
+.btn > div {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+
+.btn .prev {
+    background-image: url(../images/prev-icon.png);
+    top: 0;
+    left: 0;
+}
+
+.btn .prev.invisible {
+    display: none;
+}
+
+.btn .next {
+    background-image: url(../images/next-icon.png);
+    top: 0;
+    left: 55px;
+}
+
+.btn .next.invisible {
+    display: none;
+}
+
+
+
+/* section02 끝 */
+
+
+
+#section03 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.section03-wrap {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section03-wrap .course-wrap {
+    width: 70%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section03-wrap .course-wrap .course-btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+.section03-wrap .course-wrap .course-btn li {
+    width: 150px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 10px 10px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s all cubic-bezier(0, 0.3, 0.6, 1);
+    font-family: 'Binggrae-Bold';
+}
+
+.section03-wrap .course-wrap .course-btn li.active {
+    background-color: orange;
+}
+
+.section03-wrap .course-wrap .course-img {
+    width: 800px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section03-wrap .course-wrap .course-info {
+    width: 800px;
+    height:200px;
+    padding: 0 34px;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-img {
+    float: left;
+    width: 50%;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-text {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.section03-wrap .course-wrap .course-info:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-text h3 {
+    font-size: 20px;
+    color: orange;
+    font-family: 'Binggrae-Bold';
+    margin-bottom: 10px;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-text ul {}
+
+.section03-wrap .course-wrap .course-info .course-info-text ul li {
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-text ul li span {
+    font-family: 'Binggrae-Bold';
+    color: orange;
+}
+
+.section03-wrap .course-wrap .course-info .course-info-text p {
+    height: 12px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+
+.section03-character {}
+
+.section03-character > div {
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.section03-character .left-ch {
+    background-image: url(../images/character01.png);
+    left: -150px;
+    transform: translateY(-50%) rotate(30deg);
+}
+
+.section03-character .right-ch {
+    background-image: url(../images/character02.png);
+    right: -150px;
+    transform: translateY(-50%) rotate(-30deg);
+}
+
+
+
+/* section03 끝 */
+
+
+
+#section04 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#fff, #ddd);
+/*
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/backimg.jpg);
+*/
+}
+
+.section04-wrap {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+
+.section04-wrap .booking-wrap {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section04-wrap .booking-wrap .booking {
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.section04-wrap .booking-wrap .booking:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 110%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 208px;
+    transform: rotate(4deg);
+    z-index: 999;
+}
+
+.section04-wrap .booking-wrap .booking .booking-img {
+    flex: 4;
+    overflow: hidden;
+}
+
+
+
+.section04-wrap .booking-wrap .booking .booking-img span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: 50% 50%;
+    transition: 0.2s all cubic-bezier(0, 0.3, 0.6, 1);
+}
+
+.section04-wrap .booking-wrap .booking .booking-img span.img01 {
+    background-image: url(../images/booking-img01.JPG);
+}
+
+.section04-wrap .booking-wrap .booking .booking-img span.img02 {
+    background-image: url(../images/booking-img02.JPG);
+}
+
+.section04-wrap .booking-wrap .booking .booking-img span.img03 {
+    background-image: url(../images/booking-img03.JPG);
+}
+
+
+.section04-wrap .booking-wrap .booking .booking-info {
+    flex: 6;
+    overflow: hidden;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-title {
+    font-size: 1.5rem;
+    color: orange;
+    font-family: 'Binggrae-Bold';
+    margin-bottom: 10px;
+}
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-content {
+    font-size: 1.2rem;
+    font-family: 'Binggrae-Bold';
+    color: #333;
+}
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-btn {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #333;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-btn:before {
+    content: "바로가기";
+    color: #fff;
+    display: block;
+    width:100%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: -180px;
+    transition: 0.1s all cubic-bezier(0, 0.3, 0.6, 1);
+    cursor: pointer;
+}
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-btn.active:before {
+    left: 0;
+}
+
+.section04-wrap .booking-wrap .booking .booking-info .booking-btn a {
+    display: block;
+    width: 180px;
+    height: 50px;
+}
